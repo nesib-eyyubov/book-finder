@@ -1,0 +1,38 @@
+.flex-navbar{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.form-inline{
+  width: 50% !important;
+  display: flex;
+}
+.form-inline input{
+  width: 80% !important;
+}
+.form-inline button{
+  width: 15%;
+}
+@media(max-width:1000px){
+  .flex-navbar{
+    flex-direction: column;
+  }
+  .form-inline{
+    width:100% !important;
+    display: flex;
+    flex-direction: column;
+  }
+  .form-inline button{
+    margin-top: .5rem !important;
+    width: 100%;
+  }
+  .form-inline input{
+    width: 100% !important;
+  }
+}
+.bg-none{
+  background: none !important;
+  outline: none;
+  border: none;
+  color:green;
+}

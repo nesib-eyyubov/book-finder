@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,400&display=swap');
+body{
+    font-family: 'Poppins', sans-serif;;
+}
+.container{
+    width:80%;
+    margin: auto;
+}
+.card img{
+    width:100% !important;
+}
+.card-flex{
+    display: flex;
+    flex-direction: column;
+}
+.card{
+    
+    transition: .3s;
+}
+.card-hover{
+    width: 80%;
+    cursor:pointer;
+}
+.card-hover:hover{
+    transform: translateY(-2%);
+    box-shadow: 10px 10px 80px rgb(71, 71, 71);
+}
+.book-container{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-gap: 1rem;
+}
+.book-image img{
+    border:1px solid rgb(158, 158, 158);
+}
+.book-description{
+    border-radius: 5px;
+    background:rgb(213, 252, 213);
+    color:black;
+    padding:10px 15px;
+    border:1px solid rgb(212, 212, 212);
+}
+.book-details{
+    margin-top: 10px;
+    border: 1px solid rgb(214, 214, 214);
+    padding:15px;
+}
+.book-details i{
+    color:orange;
+}
