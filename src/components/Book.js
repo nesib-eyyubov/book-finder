@@ -7,8 +7,8 @@ const Book = ({ book }) => {
         src = book.volumeInfo.imageLinks.thumbnail;
     }
     return (
-        <div className="col-md-3 mb-4">
-            <div className="card shadow-lg bg-white rounded card-hover" style={{ width: '14 rem', minHeight: '25rem' }}>
+        <div className="col-md-3 col-xs-2 col-s-2 mb-4 margin-change">
+            <div className="card shadow-lg bg-white rounded card-hover" style={{ width: '100%', minHeight: '25rem' }}>
                 <img src={src} className="card-img-top" alt={book.id} />
                 <div className="card-body">
                     <div className="card-flex">

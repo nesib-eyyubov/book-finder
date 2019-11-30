@@ -5,17 +5,26 @@ import { connect } from 'react-redux';
 
 class NavBar extends Component {
     state = {
-        text: ''
+        text: 'popular'
+    }
+    componentDidMount() {
+        this.fetchData();
+    }
+    componentDidUpdate(prevProps, prevState) {
+        if (this.props.startIndex !== prevProps.startIndex) {
+            this.fetchData();
+        }
     }
     handleSubmit = (e) => {
         e.preventDefault();
-        var isLoading = true;
-        this.props.onSubmit({}, '', isLoading);
+        this.fetchData();
+    }
+    fetchData = () => {
         const API_KEY = 'AIzaSyCYMXtVpoQZ-baJSXeMQRGuhW_vXGgwNZI';
-        fetch(`https://www.googleapis.com/books/v1/volumes?q=${this.state.text}&key=${API_KEY}&maxResults=40`)
+        fetch(`https://www.googleapis.com/books/v1/volumes?q=${this.state.text}&key=${API_KEY}&maxResults=12&startIndex=${this.props.startIndex}`)
             .then(data => data.json())
             .then(data => {
-                this.props.onSubmit(data, this.state.text);
+                this.props.onSubmit(data);
             })
             .catch(err => console.log(err));
     }
@@ -48,13 +57,13 @@ class NavBar extends Component {
 }
 const mapStateToProps = state => {
     return {
-        text: state.text,
-        data: state.data
+        data: state.data,
+        startIndex: state.startIndex
     }
 }
 const mapDispatchesToProps = (dispatch) => {
     return {
-        onSubmit: (data, text, isLoading) => dispatch({ type: 'STORE', payload: { text, data, isLoading } }),
+        onSubmit: (data) => dispatch({ type: 'STORE', payload: { data } }),
     }
 }
 

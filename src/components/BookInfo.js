@@ -30,11 +30,11 @@ class BookInfo extends Component {
                                 </div>
                             </div>
                             <div className="book-details">
-                                <p><i class="fas fa-user-edit"></i> <strong>Author:</strong> {data.volumeInfo.authors[0]}</p>
-                                <p><i class="fas fa-book-open"></i> <strong>Title:</strong> {data.volumeInfo.title}</p>
-                                <p><i class="fas fa-address-book"></i> <strong>Categories: </strong>{data.volumeInfo.categories ? data.volumeInfo.categories.map(cat => cat) : ''}</p>
-                                <p><i class="fas fa-newspaper"></i> <strong>Page Count:  </strong>{data.volumeInfo.pageCount}</p>
-                                <p><i class="fas fa-calendar-day"></i> <strong>Publish Date:</strong> {data.volumeInfo.publishedDate}</p>
+                                <p><i className="fas fa-user-edit"></i> <strong>Author:</strong> {data.volumeInfo.authors ? data.volumeInfo.authors[0] : 'Unknown'}</p>
+                                <p><i className="fas fa-book-open"></i> <strong>Title:</strong> {data.volumeInfo.title}</p>
+                                <p><i className="fas fa-address-book"></i> <strong>Categories: </strong>{data.volumeInfo.categories ? data.volumeInfo.categories.map(cat => cat) : ''}</p>
+                                <p><i className="fas fa-newspaper"></i> <strong>Page Count:  </strong>{data.volumeInfo.pageCount}</p>
+                                <p><i className="fas fa-calendar-day"></i> <strong>Publish Date:</strong> {data.volumeInfo.publishedDate}</p>
                             </div>
                         </div>
                     </div>

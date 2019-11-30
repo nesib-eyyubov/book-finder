@@ -48,3 +48,62 @@ body{
 .book-details i{
     color:orange;
 }
+
+@media(max-width:769px){
+    .container{
+        width:100% !important;
+        margin:auto !important;
+    }
+    .container .row .card{
+        min-height: 14rem !important;
+        margin: auto;
+    }
+    .container .two-grid{
+        display: grid;
+        grid-template-columns: 1fr 1fr !important;
+    }
+    .margin-change{
+        margin: 0 !important;
+        padding:0 !important;
+    }
+    .btn-success{
+        font-size: 12px;
+    }
+    .book-container{
+        grid-template-rows: 1fr minmax(100px,auto);
+        grid-template-columns: auto;
+        grid-gap: 0;
+    }
+    .book-container .book-image{
+        width:50%;
+        margin:auto;
+    }
+    
+}
+@media(max-width:405px){
+    .container .row .card{
+        width: 80% !important;
+    }
+}
+.container{
+    position: relative;
+}
+.pagination-container{
+    position: relative;
+    left:50%;
+    bottom: -6%;
+    transform: translateX(-50%);
+    display: flex;
+    justify-content: center;
+}
+.pagination-grid{
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: auto;
+}
+@media(max-width:405px){
+    .pagination-grid{
+        grid-template-columns: repeat(5,1fr);
+    }
+}
+
