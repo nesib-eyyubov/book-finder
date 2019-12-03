@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Pagination = (props) => {
-    var pageNumbers = [];
+    let pageNumbers = [];
     for (var i = 1; i < props.numberOfPages + 1; i++) {
         pageNumbers.push(i);
     }

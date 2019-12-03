@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import rating from '../images/rating.png';
 const Book = ({ book }) => {
-    var src = "...";
+    let src = "...";
     if (book.volumeInfo.imageLinks) {
         src = book.volumeInfo.imageLinks.thumbnail;
     }
